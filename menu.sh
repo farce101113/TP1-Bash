@@ -36,7 +36,7 @@ mostrar_menu(){
 
             2)
                 echo "Corriendo proceso..."
-                BASE = "$HOME/EPNro1"
+                BASE="$HOME/EPNro1"
                 if [ -d "$BASE" ] ; then
                     cp consolidar.sh $HOME/EPNro1/
                     $HOME/EPNro1/consolidar.sh &
@@ -47,7 +47,7 @@ mostrar_menu(){
     
             3)
                 echo "Alumnos ordenados por padron:"
-                file = "$HOME/EPNro1/salida/FILENAME.txt"
+                archivo="$HOME/EPNro1/salida/FILENAME.txt"
                 if [ -f "$file" ] ; then 
                     echo "Lista de alumnos: "
                     ....
