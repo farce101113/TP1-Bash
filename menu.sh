@@ -47,6 +47,13 @@ mostrar_menu(){
     
             3)
                 echo "Alumnos ordenados por padron:"
+                file = "$HOME/EPNro1/salida/FILENAME.txt"
+                if [ -f "$file" ] ; then 
+                    echo "Lista de alumnos: "
+                    ....
+                else
+                    echo "Error el archivo requerido no existe"
+                fi
                 ;;
 
             4)
