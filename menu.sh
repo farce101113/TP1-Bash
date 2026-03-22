@@ -36,6 +36,8 @@ mostrar_menu(){
 
             2)
                 echo "Corriendo proceso..."
+                cp consolidar.sh $HOME/EPNro1/
+                $HOME/EPNro1/consolidar.sh &
                 ;;
     
             3)
