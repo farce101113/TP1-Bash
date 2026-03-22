@@ -36,6 +36,7 @@ mostrar_menu(){
 
             2)
                 echo "Corriendo proceso..."
+                BASE = "$HOME/EPNro1"
                 if [ -d "$BASE" ] ; then
                     cp consolidar.sh $HOME/EPNro1/
                     $HOME/EPNro1/consolidar.sh &
