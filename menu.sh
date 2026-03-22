@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 mostrar_menu(){
     opcion=0
     while (( opcion != 6 )); do
@@ -12,6 +11,7 @@ mostrar_menu(){
         echo "Opcion 5) Buscar un alumno por padron y mostrar"
         echo "Opcion 6) Salir"
         echo 
+
         read -p "A continuacion ingrese una opcion: " opcion
         echo
 
@@ -19,37 +19,46 @@ mostrar_menu(){
             1)  
                 echo "Creando entorno..."
 
+                BASE="$HOME/EPNro1"
+
+                if [ -d "$BASE" ]; then
+                    echo "El entorno ya existe en $BASE"
+                else
+                    mkdir -p "$BASE/entrada" "$BASE/salida" "$BASE/procesado"
+
+                    if [ $? -eq 0 ]; then
+                        echo "Entorno creado correctamente en $BASE"
+                    else
+                        echo "Error al crear el entorno"
+                    fi
+                fi
                 ;;
 
             2)
                 echo "Corriendo proceso..."
-
                 ;;
     
             3)
                 echo "Alumnos ordenados por padron:"
-
                 ;;
+
             4)
                 echo "Top 10 alumnos con notas mas altas:"
-
                 ;;
+
             5)
                 echo "Buscar un alumno por padron:"
-
                 ;;
+
             6)
                 echo "Saliendo..."
-
                 ;;
-
 
             *)
                 echo "Opción no válida"
                 ;;
         esac
     done
-
 }
 
 mostrar_menu $opcion
