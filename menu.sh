@@ -50,7 +50,8 @@ mostrar_menu(){
                 archivo="$HOME/EPNro1/salida/FILENAME.txt"
                 if [ -f "$file" ] ; then 
                     echo "Lista de alumnos: "
-                    ....
+                    sort < "$file"
+                    cat "$file"
                 else
                     echo "Error el archivo requerido no existe"
                 fi
