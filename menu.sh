@@ -51,7 +51,7 @@ mostrar_menu(){
                 if [ -f "$file" ] ; then 
                     echo "Lista de alumnos: "
                     sort < "$file"
-                    cat "$file"
+                    less "$file"
                 else
                     echo "Error el archivo requerido no existe"
                 fi
