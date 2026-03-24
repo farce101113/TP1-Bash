@@ -1,8 +1,14 @@
-sudo $HOME/EPNro1/entrada
-touch FILENAME.txt | mv FILENAME.txt $HOME/EPNro1
-  for file in $HOME/EPNro1/entrada/*.txt
-      if [ -f "$file" ] ; then
-        cat "$file" >> $HOME/EPNro1/salida/FILENAME.txt
-        mv "$file" $HOME/EPNro1/procesado
-      fi
-  done
+#!/bin/bash
+
+BASE="$HOME/EPNro1"
+
+while true; do
+    for file in "$BASE/entrada/"*.txt; do
+        [ -e "$file" ] || continue
+
+        cat "$file" >> "$BASE/salida/$FILENAME.txt"
+        mv "$file" "$BASE/procesado/"
+    done
+
+    sleep 5
+done

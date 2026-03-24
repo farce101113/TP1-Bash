@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -z "$FILENAME" ]; then
+    echo "Error: debe definir la variable de entorno FILENAME"
+    exit 1
+fi
+
 mostrar_menu(){
     opcion=0
     while (( opcion != 6 )); do
@@ -38,8 +43,9 @@ mostrar_menu(){
                 echo "Corriendo proceso..."
                 BASE="$HOME/EPNro1"
                 if [ -d "$BASE" ] ; then
-                    cp consolidar.sh $HOME/EPNro1/
-                    $HOME/EPNro1/consolidar.sh &
+                    cp consolidar.sh "$BASE/"
+                    chmod +x "$BASE/consolidar.sh"
+                    "$BASE/consolidar.sh" &
                 else
                     echo "error, primero debes seleccionar la opcion 1"
                 fi
@@ -47,11 +53,10 @@ mostrar_menu(){
     
             3)
                 echo "Alumnos ordenados por padron:"
-                archivo="$HOME/EPNro1/salida/FILENAME.txt"
-                if [ -f "$file" ] ; then 
+                archivo="$HOME/EPNro1/salida/$FILENAME.txt"
+                if [ -f "$archivo" ] ; then 
                     echo "Lista de alumnos: "
-                    sort < "$file"
-                    less "$file"
+                    sort -n "$archivo"
                 else
                     echo "Error el archivo requerido no existe"
                 fi
@@ -76,4 +81,4 @@ mostrar_menu(){
     done
 }
 
-mostrar_menu $opcion
+mostrar_menu 
