@@ -1,0 +1,10 @@
+122332,Juan Lopez,jlopez@fi.uba.ar,8
+100998,Pedro Valdéz,pvaldez@fi.uba.ar,5
+89032,Carla Simone,csimone@fi.uba.ar,7
+110245,Marcos Diaz,mdiaz@fi.uba.ar,6
+130876,Laura Mendez,lmendez@fi.uba.ar,9
+99887,Carlos Ruiz,cruiz@fi.uba.ar,3
+145672,Ana Torres,atorres@fi.uba.ar,10
+167890,Diego Castro,dcastro@fi.uba.ar,2
+156789,Sofia Rojas,srojas@fi.uba.ar,8
+112233,Pablo Gimenez,pgimenez@fi.uba.ar,7

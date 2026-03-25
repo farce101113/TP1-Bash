@@ -1,0 +1,10 @@
+77542,Franco Lomba,flomba@fi.uba.ar,10
+100223,Juana Pola,jpola@fi.uba.ar,4
+122435,Lucia Fernandez,lfernandez@fi.uba.ar,9
+134567,Matias Suárez,msuarez@fi.uba.ar,6
+145678,Valentina Perez,vperez@fi.uba.ar,8
+156700,Lucas Romero,lromero@fi.uba.ar,5
+167800,Florencia Silva,fsilva@fi.uba.ar,7
+178900,Nicolas Vega,nvega@fi.uba.ar,9
+189000,Agustina Paz,apaz@fi.uba.ar,10
+199100,Gonzalo Herrera,gherrera@fi.uba.ar,3

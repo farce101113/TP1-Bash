@@ -1,14 +1,19 @@
 #!/bin/bash
 
 BASE="$HOME/EPNro1"
+shopt -s nullglob
 
 while true; do
-    for file in "$BASE/entrada/"*.txt; do
-        [ -e "$file" ] || continue
+    txt_files=("$BASE/entrada/"*.txt)
 
-        cat "$file" >> "$BASE/salida/$FILENAME.txt"
-        mv "$file" "$BASE/procesado/"
-    done
+    if [ ${#txt_files[@]} -gt 0 ]; then
+        for file in "${txt_files[@]}"; do
+            cat "$file" >> "$BASE/salida/${FILENAME}.txt"
+            echo >> "$BASE/salida/${FILENAME}.txt"
+        done
+
+        mv "${txt_files[@]}" "$BASE/procesado/"
+    fi
 
     sleep 5
 done
